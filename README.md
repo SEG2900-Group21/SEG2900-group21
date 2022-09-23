@@ -10,7 +10,7 @@
 ...
 
 **Group Members:**
-- Jacob Taylor (300273062)
+- Jacob Taylor (300273062) [user:jwt2706]
 - 
 - 
 - 
