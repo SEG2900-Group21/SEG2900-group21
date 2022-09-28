@@ -1,10 +1,10 @@
 # SEG2900-group21
 
 **Company Name:**
-TherMug Inc.
+ThermoMug Solutions Inc.
 
 **Product:**
-TherMug
+ThermoMug
 
 **Product Description:**
 Has your drink just never seemed to be at the right tempature for you?
