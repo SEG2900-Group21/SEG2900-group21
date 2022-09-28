@@ -1,13 +1,16 @@
 # SEG2900-group21
 
 **Company Name:**
-...
+TherMug Inc.
 
 **Product:**
-...
+TherMug
 
 **Product Description:**
-...
+Has your drink just never seemed to be at the right tempature for you?
+With ThermoMug, you don't got to worry anymore.
+With an adjustable tempature setting, confortable handling, portability and customizability, this mug is sure to become your new best friend.
+ThermoMug, be the boss of temperature.
 
 **Group Members:**
 - Jacob Taylor (300273062) [user:jwt2706]
