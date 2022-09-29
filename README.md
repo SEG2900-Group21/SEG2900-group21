@@ -13,9 +13,9 @@ With an adjustable tempature setting, confortable handling, portability and cust
 ThermoMug, be the boss of temperature.
 
 **Group Members:**
-- Jacob Taylor (300273062) [user:jwt2706]
+- Jacob Taylor (300273062) [user: jwt2706]
 - Patrick Bonini (300273064) [user: patrick-bonini]
-- Omar Abdelghany (300268565) [user : OmarAbdelghanyyy]
-- Racine Kane (300273077) .[user: Racine-04]
+- Omar Abdelghany (300268565) [user: OmarAbdelghanyyy]
+- Racine Kane (300273077) [user: Racine-04]
 - 
 
