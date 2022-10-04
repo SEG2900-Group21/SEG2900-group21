@@ -17,5 +17,5 @@ ThermoMug, be the boss of temperature.
 - Patrick Bonini (300273064) [user: patrick-bonini]
 - Omar Abdelghany (300268565) [user: OmarAbdelghanyyy]
 - Racine Kane (300273077) [user: Racine-04]
-- 
+- Moussa Hassan (300295904) [user: moussa1090765]
 
