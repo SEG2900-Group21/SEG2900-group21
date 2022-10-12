@@ -1,4 +1,5 @@
-- colour theme
+- Colour Theme: Hot and Cold (Orange and Lightblue)
+- font: Trebuchet MS
 - typography
 - website design
 https://fonts.google.com/
