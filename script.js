@@ -7,6 +7,13 @@ window.addEventListener('scroll', function(){
   
 function updateThermoLiquid(top, maxTop, height) {
   var perc = (top*height)/maxTop; //finds the value of the scroll position on the maximum height
-  perc = ((perc*72)/height)+"%"; //finds the percentage of that value on 72 (just below the side of the menu container which is 75%)
-  document.getElementById("thermoLiquid").style.height = perc; //updates the liquid's status
+  perc = ((perc*72)/height); //finds the percentage of that value on 72 (just below the side of the menu container which is 75%)
+  document.getElementById("thermoLiquid").style.height = perc+"%"; //updates the liquid's status
+  celsius = (perc*50)/72; //calculating the percentage based on the degree range offered by the product
+  document.getElementById("tempature").innerHTML = (parseInt(celsius+10))+"°C"; //updates tempature
 }
+
+
+//50 to 62.5 <-- ember
+
+//5 to 60    <-- us

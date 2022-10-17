@@ -2,6 +2,15 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h1 {
+    font-size:50px;
+    margin:0px;
+}
+
+.center {
+    text-align:center;
+}
+
 .menuContainer {
     position:fixed;
     right:20px;
@@ -41,6 +50,10 @@ body {
     border:5px transparent;
     padding:13px 85px;
     transition:padding 0.5s;
+}
+
+#tempature {
+    font-size:30px;
 }
 
 /*.circle {
