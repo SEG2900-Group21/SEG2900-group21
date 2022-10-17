@@ -1,14 +1,13 @@
-$(document).on("scroll", function() {
-    var pageTopVal = $(document).scrollTop();
-    var pageBottomVal = pageTopVal + $(window).height();
-    var logos = $(".logo");
+window.addEventListener('scroll', function(){
+  var top = window.scrollY;
+  var maxTop = window.scrollMaxY;
+  var maxHeight = parseInt((getComputedStyle(document.querySelector(".menuBar"))).height);//fetches the height of le menu bar and rounds it
+  updateThermoLiquid(top, maxTop, maxHeight);
+});
   
-    for (var i = 0; i < logos.length; i++) {
-  
-      if ($(logos[i]).position().top < pageBottomVal) {
-        $(logos[i]).addClass("visible");
-      } else {
-        $(logos[i]).removeClass("visible");
-      }
-    }
-  });
+function updateThermoLiquid(top, maxTop, height) {
+  var perc = (top*height)/maxTop;
+  perc = (perc*73)/height;
+  perc = perc+"%";
+  document.getElementById("thermoLiquid").style.height = perc;
+}
