@@ -3,56 +3,55 @@ body {
 }
 
 .menuContainer {
-    position: fixed;
+    position:fixed;
     right:20px;
-    bottom:30px;
-    width:220px;
+    bottom:100px;
+    width:170px;
     height:75%;
-    /*margin:0 auto;*/
-    /*border:5px solid blue;*/
-    display: inline-block;
-    text-align: center;
+    border:5px solid transparent;
+    display:inline-block;
+    text-align:center;
 }
 
 .menuBar {
-    /*display: inline-block;*/
-    /*margin:5px;*/
+    display:table;
+    margin:0 auto;
     background-color:transparent;
-    width:170px;
-    height: 75%;
-    position:fixed;
+    height:100%;
     z-index:1;
-    /*text-align: center;*/
-    bottom: 60px;
-    right: 3%;
-    overflow: hidden;
-    /*padding:5% 0%;*/
+    bottom:60px;
+    overflow:hidden;
     border-radius:20px;
     border:5px solid black;
 }
 
-.thermoLiquid {
-    background-color: red;
-    position: fixed;
-    z-index: -1;
-    text-align: center;
-    bottom: 60px;
-    border-radius: 20px;
-    right: 3%;
-    border:5px transparent;
-    padding: 13px 90px;
-    transition: padding 0.5s;
+.spanCenter {
+    display:table-cell;
+    vertical-align:middle;
 }
 
-.circle {
-    background-color: red;
+.thermoLiquid {
+    background-color:red;
+    margin:0 auto;
+    position: fixed;
+    z-index:-1;
+    text-align:center;
+    bottom:100px;
+    border-radius:20px;
+    border:5px transparent;
+    padding:13px 85px;
+    transition:padding 0.5s;
+}
+
+/*.circle {
+    background-color:red;
     width:0px;
-    position:fixed;
+    display:fixed;
+    margin:0 auto;
     z-index:1;
-    bottom:10px;
-    right: 2%;
-    overflow-x:hidden;
+    bottom:100px;
+    overflow:hidden;
     padding:100px;
     border-radius:999px;
     border:3px solid black;
-}
+}*/

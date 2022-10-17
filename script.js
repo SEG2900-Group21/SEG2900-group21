@@ -7,7 +7,6 @@ window.addEventListener('scroll', function(){
   
 function updateThermoLiquid(top, maxTop, height) {
   var perc = (top*height)/maxTop;
-  perc = (perc*73)/height;
-  perc = perc+"%";
+  perc = ((perc*72)/height)+"%";
   document.getElementById("thermoLiquid").style.height = perc;
 }
