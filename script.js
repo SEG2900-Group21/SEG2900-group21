@@ -12,8 +12,3 @@ function updateThermoLiquid(top, maxTop, height) {
   celsius = (perc*50)/72; //calculating the percentage based on the degree range offered by the product
   document.getElementById("tempature").innerHTML = (parseInt(celsius+10))+"°C"; //updates tempature
 }
-
-
-//50 to 62.5 <-- ember
-
-//5 to 60    <-- us
