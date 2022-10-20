@@ -1,3 +1,85 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+h1 {
+    font-size:50px;
+    margin:15px;
+}
+
+.center {
+    text-align:center;
+}
+
+.menuContainer {
+    position:fixed;
+    right:20px;
+    bottom:100px;
+    width:170px;
+    height:75%;
+    border:5px solid transparent;
+    display:inline-block;
+    text-align:center;
+}
+
+.menuBar {
+    display:table;
+    margin:0 auto;
+    background-color:transparent;
+    height:100%;
+    z-index:1;
+    bottom:60px;
+    overflow:hidden;
+    border-radius:20px;
+    border:5px solid black;
+}
+
+.spanCenter {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.thermoLiquid {
+    background-color:red;
+    margin:0 auto;
+    position: fixed;
+    z-index:-1;
+    text-align:center;
+    bottom:100px;
+    border-radius:20px;
+    border:5px transparent;
+    padding:13px 85px;
+    transition:padding 0.5s;
+}
+
+#tempature {
+    font-size:30px;
+}
+
+.footButtonsContainer {
+    /*border:4px solid black;
+    height: 30px;
+    width: 85%;
+    margin: 10px;*/
+    text-align:center;
+    position:relative;
+}
+
+.footbuttons {
+    /*position:relative;*/
+    margin:10px auto;
+    display:inline-block;
+}
+
+/*.circle {
+    background-color:red;
+    width:0px;
+    display:fixed;
+    margin:0 auto;
+    z-index:1;
+    bottom:100px;
+    overflow:hidden;
+    padding:100px;
+    border-radius:999px;
+    border:3px solid black;
+}*/
