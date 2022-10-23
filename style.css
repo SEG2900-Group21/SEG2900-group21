@@ -12,6 +12,10 @@ h1 {
     margin:15px;
 }
 
+.slideshowimages{ 
+    width: 100%;
+}
+
 .center {
     text-align:center;
 }
