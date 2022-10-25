@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding:0;
     background-size: 100%;
-    background: linear-gradient(to bottom, darkblue, blue, lightblue, white, yellow, orange, red);
+    background: linear-gradient(to bottom, rgb(61, 61, 255), rgb(69, 69, 255), rgb(119, 221, 255), white, rgb(252, 252, 103), rgb(255, 192, 76), rgb(255, 54, 54));
     background-repeat: no-repeat;
 }
 
@@ -73,6 +73,13 @@ button {
     color:black;
     padding:15px 25px;
     text-align:center;
+}
+
+.menuButtons {
+    width: 130px;
+    height: 35px;
+    padding: 5%;
+    margin: 7px;
 }
 
 .footButtons {
