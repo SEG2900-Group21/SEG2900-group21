@@ -1,25 +1,19 @@
-- Colour Theme: Hot and Cold (Orange and Lightblue)
-- font: Trebuchet MS
-- typography
-- website design
-https://fonts.google.com/
-
-Overall Look and Feel of Roomie
+Overall Look and Feel of the website
 ===============================
-The overall look and feel should be minimalist and flat. We will avoid 3d
-buttons and 3d metal looks.
-The website should be calm and gentle for the user.
+We want to demonstrate the features of the ThermoMug on the website, like the ability to change the tempature so easily.
+Images will have a basic 'pop-up' animation. And there will be a static menu bar on the side with important links.
 
 Colours
 ========
-For Roomie, colours expose our personality to the customers and represent that
-we are calm and pleasing.
-These are our color swatches:
-- #583E7F
-- #DEC9FF
-- #B07CFF
-- #6F647F
-- #8D63CC
+The colours will be the hot (red-ish) and the cold (blue-ish) and everything in between.
+General colours:
+- 61, 61, 255
+- 69, 69, 255
+- 119, 221, 255
+- 255, 255, 255
+- 252, 252, 103
+- 255, 192, 76
+- 250, 44, 44
 
 Iconography
 ===========
@@ -28,11 +22,11 @@ overall look and feel.
 
 Typography
 ==========
-We will be using Roboto from Google Fonts.
+The font that will be used is Trebuchet MS.
 
 Links
 =====
-Links will not be underlined and should change color when a user hovers over it.
+All links will be found in a button that slightly change colour when the user hovers over it.
 
 Buttons
 =======
