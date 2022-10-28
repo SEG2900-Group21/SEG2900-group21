@@ -1,9 +1,17 @@
+html {
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+html::-webkit-scrollbar { /*these functions will hide the scroll bar from view for all commonly used browsers*/
+    display:none;
+}
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding:0;
     background-size: 100%;
-    background: linear-gradient(to bottom, rgb(61, 61, 255), rgb(69, 69, 255), rgb(119, 221, 255), white, rgb(252, 252, 103), rgb(255, 192, 76), rgb(255, 54, 54));
+    background: linear-gradient(to bottom, rgb(61, 61, 255), rgb(69, 69, 255), rgb(119, 221, 255), white, rgb(252, 252, 103), rgb(255, 192, 76), rgb(250, 44, 44));
     background-repeat: no-repeat;
 }
 
@@ -91,22 +99,12 @@ img {
     border-radius:15px;
     height:30%;
     width:30%;
+    transition-duration: 0.2s;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
 }
 
 img:hover { /*shadow effect for images while you hover over them*/
     transition-duration: 0.2s;
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
-/*.circle {
-    background-color:red;
-    width:0px;
-    display:fixed;
-    margin:0 auto;
-    z-index:1;
-    bottom:100px;
-    overflow:hidden;
-    padding:100px;
-    border-radius:999px;
-    border:3px solid black;
-}*/
