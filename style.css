@@ -31,6 +31,10 @@ h1 {
     text-align:center;
 }
 
+.mugInfo {
+    width: 85%;
+}
+
 .menuContainer {
     position:fixed;
     right:20px;
