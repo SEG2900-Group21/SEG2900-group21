@@ -35,6 +35,14 @@ h1 {
     text-align:center;
 }
 
+.centerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
 .mugInfo {
     width: 85%;
 }
