@@ -108,3 +108,10 @@ img:hover { /*shadow effect for images while you hover over them*/
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
