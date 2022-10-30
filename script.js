@@ -15,34 +15,188 @@ function updateThermoLiquid(top, maxTop, height) {
 
 
 //Shopping cart part
-//show cart
-(function(){//imediately invoked function
-    const cartInfo = document.getElementById(cart-info);// cart-info is supposed to be the the id of the cart info container that hold what's in the cart
-    const cart =document.getElementById(cart); // cart is supposed tp be the id of the cart button
-    cartInfo.addEventListener('click',function(){
-        cart.classList.toggle('show-cart');// when cart has the class of show-cart it means that the cart can now be shown
+var shoppingCart = (function() {
+  cart = [];
+  
+  // Mug Constructor
+  function Mug(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Saving  the cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Loading the cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
+  var obj = {};
+  
+  // Add obj to cart
+  obj.addtoCart = function(name, price, count) {
+    for(var mug in cart) {
+      if(cart[mug].name === name) {
+        cart[mug].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var mug = new Mug(name, price, count);
+    cart.push(mug);
+    saveCart();
+  }
+  // Counts items
+  obj.countItems = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.deleteMug = function(name) {
+      for(var mug in cart) {
+        if(cart[mug].name === name) {
+          cart[mug].count --;
+          if(cart[mug].count === 0) {
+            cart.splice(mug, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+
+  // Remove all items from cart
+  obj.deleteAll = function(name) {
+    for(var mug in cart) {
+      if(cart[mug].name === name) {
+        cart.splice(mug, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var mug in cart) {
+      totalCount += cart[mug].count;
+    }
+    return totalCount;
+  }
+
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var mug in cart) {
+      totalCart += cart[mug].price * cart[mug].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      mug = cart[i];
+      copy = {};
+      for(p in mug) {
+        copy[p] = mug[p];
+
+      }
+      itemCopy.total = Number(mug.price * mug.count).toFixed(2);
+      cartCopy.push(copy)
+    }
+    return cartCopy;
+  }
 
 
-    })
-
+  return obj;
 })();
 
-// add items to the cart
-(function(){
-    const addCartBtn=document.querySelectorAll('addToCart'); //addToCart is supposed to be the name of the add to cart button
-    addCartBtn.forEach(function(btn){
-        btn.addEventListener('click',function(event){
-           // console.log(event.target);
-           if (event.target.parentElement.classList.contains('addToCart')){ // this condition could be removed depending on how the add button is coded 
-            let path = event.target.parentElement.previousElementSibling.src; // coding it this way assumes that the way to diffrentiate between images would be the name of the img src
-            let pos=fullPath.indexof('img')+4; // reducing the string to where only the image name is there instead of this super longer path   
-            let imgName= fullPath.slice(pos);  // i want to keep only the name of the image incase there is gonna be a mini pic of the mug in the shopping cart
-            const item ={};
-            item.img='img-cart${imgName}';//img-cart is the folder where there would be the mini images for the cart
 
-           }
 
-        })
-    })
+// Add item
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addtoCart(name, price, 1);
+  displayCart();
+});
 
-})()
+// Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";
+  }
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.deleteAll(name);
+  displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.deleteMug(name);
+  displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addtoCart(name);x``
+  displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.addtoCart(name, count);
+  displayCart();
+});
+
+displayCart();
