@@ -62,7 +62,7 @@ var shoppingCart = (function() {
       }
     }
   };
-  // Remove item from cart
+  // Deletes Mug
   obj.deleteMug = function(name) {
       for(var mug in cart) {
         if(cart[mug].name === name) {
@@ -76,7 +76,7 @@ var shoppingCart = (function() {
     saveCart();
   }
 
-  // Remove all items from cart
+  // Delete All
   obj.deleteAll = function(name) {
     for(var mug in cart) {
       if(cart[mug].name === name) {
