@@ -20,6 +20,10 @@ h1 {
     margin:15px;
 }
 
+.imgDisplay {
+    margin-left:25%;
+    margin-right:25%;
+}
 
 .outline {
     border: 4px solid black;
@@ -43,7 +47,7 @@ h1 {
 .menuContainer {
     position:fixed;
     right:20px;
-    bottom:100px;
+    bottom:10%;
     width:170px;
     height:75%;
     border:5px solid transparent;
@@ -74,7 +78,7 @@ h1 {
     position: fixed;
     z-index:-1;
     text-align:center;
-    bottom:100px;
+    bottom:10%;
     border-radius:20px;
     border:5px transparent;
     padding:13px 85px;
