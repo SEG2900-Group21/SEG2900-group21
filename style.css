@@ -35,6 +35,11 @@ h1 {
     width: 85%;
 }
 
+.policy {
+    margin-left:2%;
+    margin-right: 15%;
+}
+
 .menuContainer {
     position:fixed;
     right:20px;
