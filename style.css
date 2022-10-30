@@ -20,12 +20,24 @@ h1 {
     margin:15px;
 }
 
-.slideshowimages{ 
-    width: 100%;
+
+.outline {
+    border: 4px solid black;
+    border-radius: 40px;
+    background-color: rgb(211,211,211,0.3);
 }
 
 .center {
     text-align:center;
+}
+
+.mugInfo {
+    width: 85%;
+}
+
+.policy {
+    margin-left:2%;
+    margin-right: 15%;
 }
 
 .menuContainer {
