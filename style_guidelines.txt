@@ -1,12 +1,13 @@
 Overall Look and Feel of the website
 ===============================
 We want to demonstrate the features of the ThermoMug on the website, like the ability to change the tempature so easily.
-Images will have a basic 'pop-up' animation. And there will be a static menu bar on the side with important links.
+Images will have a small 'pop-up' animation with a drop down shadow to give the website a feel in interactivity.
+And there will be a static menu bar on the side with important links that will be decorated like a thermostat.
 
 Colours
 ========
 The colours will be the hot (red-ish) and the cold (blue-ish) and everything in between.
-General colours:
+General colours (in RGB):
 - 61, 61, 255
 - 69, 69, 255
 - 119, 221, 255
@@ -17,8 +18,8 @@ General colours:
 
 Iconography
 ===========
-We will focus on using icons that have a 'flat' design, which adheres to the
-overall look and feel.
+We will use icons to show the mug features, and have concept
+art as temporary replacements to the actual product image.
 
 Typography
 ==========
@@ -30,4 +31,4 @@ All links will be found in a button that slightly change colour when the user ho
 
 Buttons
 =======
-Buttons will be flat designed using the chosen colors outlined above
+Buttons will be flat design with a grey-ish colour to make it stand out.
