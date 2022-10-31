@@ -4,33 +4,51 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     </head>
     <body>
         <script src="script.js"></script>
-        <button class="footButtons" onclick="location.href='index.html'" style = "float:left;">Home</button>
+        <button class="footButtons" onclick="location.href='../index.html'" style = "float:left;">Home</button>
         <h1><center>Get your ThermoMug today!</center></h1><br><br>
-
+        <center><div class="cart">
+            <i class="bi bi-cart"></i>
+            <div class="cartAmount">0</div>
+        </div></center>
         <div style="margin-left:20%">
-            <h2>The Classic ThermoMug</h2>
+            <div class="card-block">
+            <h2 class="card-title">The Classic ThermoMug</h2>
             <p>The original ThermoMug design.</p>
-            <button>Add To Cart</button>
+            <p class="card-price">$25</p>
+            <a href="#" data-name="Athletic" data-price="25" class="add-to-cart btn btn-primary">Add to cart</a>
             <br>
-            <h2>The Athletic ThermoMug</h2>
+        </div>
+        <div class="card-block">
+            <h2 class="card-title">The Athletic ThermoMug</h2>
             <p>The sports and adventure series.</p>
-            <button>Add To Cart</button>
+            <p class="card-price">$25</p>
+            <a href="#" data-name="Athletic" data-price="25" class="add-to-cart btn btn-primary">Add to cart</a>
             <br>
-            <h2>The Business ThermoMug</h2>
+        </div>
+        <div class="card-block">
+            <h2 class="card-title">The Business ThermoMug</h2>
             <p>Business grade and professional-looking mug for the office.</p>
-            <button>Add To Cart</button>
+            <p class="card-price">$25</p>
+            <a href="#" data-name="Business" data-price="25" class="add-to-cart btn btn-primary">Add to cart</a>
             <br>
-            <h2>The Kids' ThermoMug</h2>
+        </div>
+        <div class="card-block">
+            <h2 class="card-title">The Kids' ThermoMug</h2>
             <p>There is a ThermoMug for everyone!</p>
-            <button>Add To Cart</button>
+            <p class="card-price">$25</p>
+            <a href="#" data-name="Kids" data-price="25" class="add-to-cart btn btn-primary">Add to cart</a>
             <br>
-            <h2>The Tactical ThermoMug</h2>
+        </div>
+        <div class="card-block">
+            <h2 class="card-title">The Tactical ThermoMug</h2>
             <p>Military-grade. heavy-duty. You name it. This ThermoMug will stick with you no matter the weather.</p>
-            <button>Add To Cart</button>
-            <br>
+            <p class="card-price">$25</p>
+            <a href="#" data-name="Tactical" data-price="25" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
         </div>
 
         <div class="menuContainer" id="menuContainer">
@@ -55,5 +73,11 @@
             <button class="footButtons" onclick="location.href='info/privacy.html'">Privacy Policy</button>
             <button class="footButtons" onclick="location.href='info/terms.html'">Terms</button>
         </div>
+        <div class=”Cart-Container”></div> <!--Must be moved to the top right using CSS-->
+        <div hidden class=”Header”>
+            <h3 class=”Heading”>Shopping Cart</h3>
+            <h5 class=”Action”>Remove all</h5>
+            </div>
+
     </body>
 </html>
