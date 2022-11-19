@@ -8,54 +8,51 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
     <body>
-        <script src="script.js"></script>
         <button class="footButtons" onclick="location.href='../index.html'" style = "float:left;">Home</button>
         <h1><center>Get your ThermoMug today!</center></h1><br><br>
-        <center>
-        <nav>
-           <li class="cart">
-                    <a href="cart.html">
-                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
-                    </a>
-                </li>
-            </nav></center>
+        <center><div class="cart">
+            <i class="bi bi-cart"></i>
+            <div id="cartAmount">0</div>
+        </div></center>
         <div style="margin-left:20%">
             <div class="card-block">
             <h2 class="card-title">The Classic ThermoMug</h2>
             <p>The original ThermoMug design.</p>
             <p class="card-price">$25</p>
-            <a class="add-cart cart1" href="#">Add To Cart</a>
-            <input type="hidden" value="15" />
+            <button class ="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
+            <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
         </div>
         <div class="card-block">
             <h2 class="card-title">The Athletic ThermoMug</h2>
             <p>The sports and adventure series.</p>
             <p class="card-price">$25</p>
-            <a class="add-cart cart2" href="#">Add To Cart</a>
-            <input type="hidden" value="15" />
+            <button class="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
+            <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
         </div>
         <div class="card-block">
             <h2 class="card-title">The Business ThermoMug</h2>
             <p>Business grade and professional-looking mug for the office.</p>
             <p class="card-price">$25</p>
-            <a class="add-cart cart3" href="#">Add To Cart</a>
-            <input type="hidden" value="15" />
+            <button class="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
+            <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
         </div>
         <div class="card-block">
             <h2 class="card-title">The Kids' ThermoMug</h2>
             <p>There is a ThermoMug for everyone!</p>
-            <p class="card-price">$25</p> 
-            <a class="add-cart cart4" href="#">Add To Cart</a>
+            <p class="card-price">$25</p>
+            <button class ="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
+            <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
         </div>
         <div class="card-block">
             <h2 class="card-title">The Tactical ThermoMug</h2>
             <p>Military-grade. heavy-duty. You name it. This ThermoMug will stick with you no matter the weather.</p>
-            <p class="card-price">$25</p> 
-            <a class="add-cart cart5" href="#">Add To Cart</a>
+            <p class="card-price">$25</p>
+            <button class ="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
+            <button  class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
         </div>
         </div>
 
@@ -81,6 +78,7 @@
             <button class="footButtons" onclick="location.href='info/privacy.html'">Privacy Policy</button>
             <button class="footButtons" onclick="location.href='info/terms.html'">Terms</button>
         </div>
+            <script src="script.js"></script>
 
     </body>
 </html>
