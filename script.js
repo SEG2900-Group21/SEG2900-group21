@@ -15,6 +15,21 @@ function updateThermoLiquid(top, maxTop, height) {
 }
 
 //Shopping cart part
+let increment= document.getElementById("add-to-cart");
+let amount= document.getElementById("cartAmount");
+let items=0;
+let decrement= document.getElementById("remove-from-cart");
+ 
+function addToCart(){
+  amount.textContent=++items;
+}
+function removeFromCart(){
+  if(items>0){
+    amount.textContent=--items;
+  }
+}
+ 
+/*
 var shoppingCart = (function() {
   cart = [];
   
@@ -200,3 +215,4 @@ $('.show-cart').on("change", ".item-count", function(event) {
 });
 
 displayCart();
+*/
