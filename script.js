@@ -28,72 +28,18 @@ function removeFromCart(){
     amount.textContent=--items;
   }
 }
- 
-/*
-var shoppingCart = (function() {
-  cart = [];
+
+function goToLogin(targetLocation){ //passes "athletic.html"
   
-  // Mug Constructor
-  function Mug(name, price, count) {
-    this.name = name;
-    this.price = price;
-    this.count = count;
-  }
-  
-  // Saving  the cart
-  function saveCart() {
-    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
-  }
-  
-    // Loading the cart
-  function loadCart() {
-    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
-  }
-  
-  //Shopping cart part
- let increment= document.getElementById("add-to-cart");
- let amount= document.getElementById("cartAmount");
- let items=0;
- let decrement= document.getElementById("remove-from-cart");
+  window.location = ("../login.html");
+  console.log(targetLocation);
+  localStorage.setItem("redirectLocation", targetLocation);
+  //sconsole.log(localStorage.getItem("redirectLocation"));
+}
 
- function addToCart(){
-    amount.textContent=++items;
- }
- function removeFromCart(){
-  if(items>0){
-    amount.textContent=--items;
-  }
- }
-
-// Delete item button
-
-$('.show-cart').on("click", ".delete-item", function(event) {
-  var name = $(this).data('name')
-  shoppingCart.deleteAll(name);
-  displayCart();
-})
-
-
-// -1
-$('.show-cart').on("click", ".minus-item", function(event) {
-  var name = $(this).data('name')
-  shoppingCart.deleteMug(name);
-  displayCart();
-})
-// +1
-$('.show-cart').on("click", ".plus-item", function(event) {
-  var name = $(this).data('name')
-  shoppingCart.addtoCart(name);x``
-  displayCart();
-})
-
-// Item count input
-$('.show-cart').on("change", ".item-count", function(event) {
-   var name = $(this).data('name');
-   var count = Number($(this).val());
-  shoppingCart.addtoCart(name, count);
-  displayCart();
-});
-
-displayCart();
-*/
+//login function
+function login(){
+  var redirectLocation = localStorage.getItem("redirectLocation");
+  console.log(redirectLocation);
+  window.location = localStorage.getItem("redirectLocation");
+}

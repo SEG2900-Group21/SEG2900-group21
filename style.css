@@ -13,7 +13,6 @@ body {
     background-size: 100%;
     background: linear-gradient(to bottom, rgb(61, 61, 255), rgb(69, 69, 255), rgb(119, 221, 255), white, rgb(252, 252, 103), rgb(255, 192, 76), rgb(250, 44, 44));
     background-repeat: no-repeat; 
-    /*background-color: gray;*/
 }
 
 h1 {
