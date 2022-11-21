@@ -2,20 +2,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!--<meta name="keywords" content="HTML, CSS, JavaScript">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>ThermoMug | Home</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            function initUser(){
+                if (localStorage.getItem("userEmail")!=null) {
+                    document.getElementById("username").innerHTML = localStorage.getItem("userEmail");
+                } else {
+                    document.getElementById("username").innerHTML = "Not logged in";
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body onload="initUser()">
         <script src="script.js"></script>
         <div style="float:left">
             <img src="Mockups/thermomug-logo.png" style="position:absolute;margin:10px;width:13%;height:20%;">
         </div>
-        <button onclick="location.href='login.html'" style="float:right">
-            Login & Shop now
-        </button>
+        <div style="float:right">
+            <span id="username"></span>
+            <button onclick="location.href='login.html'">
+                Login & Shop now
+            </button>
+        </div>
+        
         <span class="center">
             <h1>ThermoMug</h1>
             <h3>Be the boss of your tempature.</h3>

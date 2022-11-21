@@ -29,17 +29,9 @@ function removeFromCart(){
   }
 }
 
-function goToLogin(targetLocation){ //passes "athletic.html"
-  
-  window.location = ("../login.html");
-  console.log(targetLocation);
-  localStorage.setItem("redirectLocation", targetLocation);
-  //sconsole.log(localStorage.getItem("redirectLocation"));
-}
-
 //login function
 function login(){
-  var redirectLocation = localStorage.getItem("redirectLocation");
-  console.log(redirectLocation);
-  window.location = localStorage.getItem("redirectLocation");
+  localStorage.setItem("userEmail", document.getElementById("emailInput").value) //saves email (username)
+  localStorage.setItem("userPassword", document.getElementById("passwordInput").value) //saves password (i know its not encrypted)
+  window.location = "pricing.html";
 }
