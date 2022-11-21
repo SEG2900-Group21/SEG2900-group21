@@ -6,11 +6,12 @@
         <link rel="stylesheet" href="style.css">
         <title>ThermoMug | Home</title>
         <script>
-            function initUser(){
-                if (localStorage.getItem("userEmail")!=null) {
-                    document.getElementById("username").innerHTML = localStorage.getItem("userEmail");
+            function initUser(){ //displays username (email) if user is logged in
+                console.log("init");
+                if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
+                    document.getElementById("username").innerHTML = "<b>Not logged in</b>";
                 } else {
-                    document.getElementById("username").innerHTML = "Not logged in";
+                    document.getElementById("username").innerHTML = "<b>Logged in as:</b> "+localStorage.getItem("userEmail");
                 }
             }
         </script>
@@ -20,20 +21,16 @@
         <div style="float:left">
             <img src="Mockups/thermomug-logo.png" style="position:absolute;margin:10px;width:13%;height:20%;">
         </div>
-        <div style="float:right">
-            <span id="username"></span>
-            <button onclick="location.href='login.html'">
-                Login & Shop now
-            </button>
-        </div>
-        
+        <button style="float:right" onclick="location.href='login.html'">
+            Login & Shop now
+        </button>
         <span class="center">
             <h1>ThermoMug</h1>
             <h3>Be the boss of your tempature.</h3>
             <br>
             <p>Has your drink just never seemed to be at the right tempature for you?<br>With ThermoMug, you don't got to worry anymore.<br>With an adjustable tempature setting, confortable handling, portability and customizability,<br>this mug is sure to become your new best friend. Choose the one that suits you today!</p>
         </span>
-        <br><br><br>
+        <br><center><div style="position:relative;right:3px;"><span id="username"></span></div></center><br><br>
         <div class="imgDisplay">
             <center>
                 <div class="outline">
