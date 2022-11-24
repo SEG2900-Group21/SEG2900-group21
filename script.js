@@ -1,7 +1,6 @@
 window.addEventListener('scroll', function(){
     var top = window.scrollY; //fetches the user's scroll position
     var maxTop = document.documentElement.scrollHeight - document.documentElement.clientHeight; //fetches the maximun scroll position
-    console.log(maxTop);
     var maxHeight = parseInt((getComputedStyle(document.querySelector(".menuBar"))).height);//fetches the height of the menu bar and rounds it
     updateThermoLiquid(top, maxTop, maxHeight); //updates the menu's liquid status
   });

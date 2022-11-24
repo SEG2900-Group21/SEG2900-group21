@@ -7,7 +7,6 @@
         <title>ThermoMug | Home</title>
         <script>
             function initUser(){ //displays username (email) if user is logged in
-                console.log("init");
                 if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
                     document.getElementById("username").innerHTML = "<b>Not logged in</b>";
                 } else {
