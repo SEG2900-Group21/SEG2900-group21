@@ -11,8 +11,34 @@ body {
     margin: 0;
     padding:0;
     background-size: 100%;
-    background: linear-gradient(to bottom, rgb(61, 61, 255), rgb(69, 69, 255), rgb(119, 221, 255), white, rgb(252, 252, 103), rgb(255, 192, 76), rgb(250, 44, 44));
+    background: rgb(61, 61, 255);
     background-repeat: no-repeat; 
+}
+
+#flash {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    background:linear-gradient(to bottom, rgb(61, 61, 255) 0%, rgb(255, 190, 137) 50%, rgb(255, 184, 137) 75%, rgb(253, 73, 73) 100%);
+    z-index:-1;
+}
+#flash::before {
+    content:'';
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    background:linear-gradient(to top, rgb(253, 73, 73) 0%, rgb(119, 221, 255) 50%, rgb(96, 151, 235) 75%, rgb(61, 61, 255) 100%);
+    opacity:0;
+    animation:flash 5000ms ease-in-out 0s infinite alternate-reverse;
+    z-index:-1;
+}
+@keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 h1 {
