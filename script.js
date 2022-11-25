@@ -34,3 +34,7 @@ function login(){
   localStorage.setItem("userPassword", document.getElementById("passwordInput").value) //saves password (i know its not encrypted)
   window.location = "pricing.html";
 }
+
+function checkout(){
+  alert("The payment system is still under construction.");
+}
