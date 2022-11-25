@@ -29,7 +29,7 @@ body {
     position:fixed;
     background:linear-gradient(to top, rgb(253, 73, 73) 0%, rgb(119, 221, 255) 50%, rgb(96, 151, 235) 75%, rgb(61, 61, 255) 100%);
     opacity:0;
-    animation:flash 5000ms ease-in-out 0s infinite alternate-reverse;
+    animation:flash 3500ms ease-in-out 0s infinite alternate-reverse;
     z-index:-1;
 }
 @keyframes flash {
