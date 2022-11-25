@@ -1,8 +1,9 @@
 Overall Look and Feel of the website
 ===============================
 We want to demonstrate the features of the ThermoMug on the website, like the ability to change the tempature so easily.
+So show that, the website's background will change from blue (representing cold) to red (representing warm) as the user scrolls downwards.
+On top of that, there will be a static menu bar on the side with important links that will be decorated like a thermostat and will "change tempature" as the user scrolls downwards.
 Images will have a small 'pop-up' animation with a drop down shadow to give the website a feel in interactivity.
-And there will be a static menu bar on the side with important links that will be decorated like a thermostat.
 
 Colours
 ========
