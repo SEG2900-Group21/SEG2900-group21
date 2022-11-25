@@ -8,7 +8,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
     <body>
-        <button class="footButtons" onclick="location.href='../index.html'" style = "float:left;">Home</button>
+        <div id="flash"></div>
+        <button class="footButtons" onclick="location.href='index.html'" style = "float:left;">Home</button>
         <h1><center>Get your ThermoMug today!</center></h1><br><br>
         <center><div class="cart">
             <i class="bi bi-cart"></i>
@@ -18,7 +19,7 @@
             <div class="card-block">
             <h2 class="card-title">The Classic ThermoMug</h2>
             <p>The original ThermoMug design.</p>
-            <p class="card-price">$25</p>
+            <p class="card-price">$79.99</p>
             <button class ="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
             <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
@@ -26,7 +27,7 @@
         <div class="card-block">
             <h2 class="card-title">The Athletic ThermoMug</h2>
             <p>The sports and adventure series.</p>
-            <p class="card-price">$25</p>
+            <p class="card-price">$89.99</p>
             <button class="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
             <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
@@ -34,7 +35,7 @@
         <div class="card-block">
             <h2 class="card-title">The Business ThermoMug</h2>
             <p>Business grade and professional-looking mug for the office.</p>
-            <p class="card-price">$25</p>
+            <p class="card-price">$99.99</p>
             <button class="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
             <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
@@ -42,7 +43,7 @@
         <div class="card-block">
             <h2 class="card-title">The Kids' ThermoMug</h2>
             <p>There is a ThermoMug for everyone!</p>
-            <p class="card-price">$25</p>
+            <p class="card-price">$74.99</p>
             <button class ="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
             <button class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
             <br>
@@ -50,11 +51,16 @@
         <div class="card-block">
             <h2 class="card-title">The Tactical ThermoMug</h2>
             <p>Military-grade. heavy-duty. You name it. This ThermoMug will stick with you no matter the weather.</p>
-            <p class="card-price">$25</p>
+            <p class="card-price">$149.99</p>
             <button class ="addButton" id="add-to-cart" onclick="addToCart()">Add To Cart</button>
             <button  class="removeButton" id="remove-from-cart" onclick="removeFromCart()">Remove From Cart</button>
         </div>
         </div>
+
+        <center>
+            <button onclick="checkout()">Proceed to Checkout</button>
+            <h3>Be the boss of your tempature.</h3>
+        </center>
 
         <div class="menuContainer" id="menuContainer">
             <div style="position:absolute;padding:30%;font-size:30px;"; id="tempature"></div>
@@ -78,7 +84,6 @@
             <button class="footButtons" onclick="location.href='info/privacy.html'">Privacy Policy</button>
             <button class="footButtons" onclick="location.href='info/terms.html'">Terms</button>
         </div>
-            <script src="script.js"></script>
-
+        <script src="script.js"></script>
     </body>
 </html>
