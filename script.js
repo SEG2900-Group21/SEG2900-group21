@@ -39,6 +39,13 @@ function login(){
   }
 }
 
+function logout(){
+  alert("Logged out successfully. Please close your browser to protect your sensitive information.");
+  localStorage.setItem("userEmail", '');
+  localStorage.setItem("userPassword", '');
+  window.location = "index.html";
+}
+
 function checkout(){
   alert("The payment system is still under construction.");
 }

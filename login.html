@@ -9,8 +9,10 @@
             function initUser(){ //displays username (email) if user is logged in
                 if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
                     document.getElementById("username").innerHTML = "<b>Not logged in</b>";
+                    document.getElementById("logoutButton").style.visibility = "hidden";
                 } else {
                     document.getElementById("username").innerHTML = "<b>Logged in as:</b> "+localStorage.getItem("userEmail");
+                    document.getElementById("logoutButton").style.visibility = "visible";
                 }
             }
         </script>
@@ -18,6 +20,7 @@
     <body onload="initUser()">
         <script src="script.js"></script>
         <div id="flash"></div>
+        <button id="logoutButton" onclick="logout()" style="position:absolute;float:left;margin:20px;">Log Out</button>
         <div class="centerLogin">
             <div><span id="username" style="position:fixed;top:30vh"></span></div>
             <form action="pricing.html" method="post">

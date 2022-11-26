@@ -5,17 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>ThermoMug | Home</title>
-        <script>
-            function initUser(){ //displays username (email) if user is logged in
-                if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
-                    document.getElementById("username").innerHTML = "<b>Not logged in</b>";
-                } else {
-                    document.getElementById("username").innerHTML = "<b>Logged in as:</b> "+localStorage.getItem("userEmail");
-                }
-            }
-        </script>
     </head>
-    <body onload="initUser()">
+    <body>
         <script src="script.js"></script>
         <div id="flash"></div>
         <div style="float:left">
@@ -30,7 +21,7 @@
             <br>
             <p>Has your drink just never seemed to be at the right tempature for you?<br>With ThermoMug, you don't got to worry anymore.<br>With an adjustable tempature setting, confortable handling, portability and customizability,<br>this mug is sure to become your new best friend. Choose the one that suits you today!</p>
         </span>
-        <br><center><div style="position:relative"><span id="username"></span></div></center><br><br>
+        <br><br>
         <div class="imgDisplay">
             <center>
                 <div class="outline">
