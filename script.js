@@ -30,11 +30,23 @@ function removeFromCart(){
 
 //login function
 function login(){
-  localStorage.setItem("userEmail", document.getElementById("emailInput").value) //saves email (username)
-  localStorage.setItem("userPassword", document.getElementById("passwordInput").value) //saves password (i know its not encrypted)
-  window.location = "pricing.html";
+  if (document.getElementById("emailInput").value == ''||document.getElementById("passwordInput").value == ''){
+    alert("Invalid login input. Make sure to enter a valid email adress and a strong password."); //won't work if one of the boxes are empty
+  } else {
+    localStorage.setItem("userEmail", document.getElementById("emailInput").value) //saves email (username)
+    localStorage.setItem("userPassword", document.getElementById("passwordInput").value) //saves password (i know its not encrypted)
+    window.location = "pricing.html";
+  }
 }
 
 function checkout(){
   alert("The payment system is still under construction.");
+}
+
+function initUser(){ //displays username (email) if user is logged in
+  if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
+      document.getElementById("username").innerHTML = "<b>Not logged in</b>";
+  } else {
+      document.getElementById("username").innerHTML = "<b>Logged in as:</b> "+localStorage.getItem("userEmail");
+  }
 }

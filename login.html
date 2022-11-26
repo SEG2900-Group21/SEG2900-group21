@@ -4,20 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <title>ThermoMug | Log In</title>
+        <script>
+            function initUser(){ //displays username (email) if user is logged in
+                if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
+                    document.getElementById("username").innerHTML = "<b>Not logged in</b>";
+                } else {
+                    document.getElementById("username").innerHTML = "<b>Logged in as:</b> "+localStorage.getItem("userEmail");
+                }
+            }
+        </script>
     </head>
-    <script src="script.js"></script>
-    <div id="flash"></div>
-    <div class="center">
-        <body>
-            <div class="centerLogin">
-                <form action="pricing.html" method="post">
-                    <label for="email">Email:</label><br>
-                    <input id="emailInput" type="email" name="emailInput" placeholder="example@domain.com"><br>
-                    <label for="password">Password:</label><br>
-                    <input id="passwordInput" type="password" name="passwordInput"><br><br>
-                </form>
-                <button onclick="login()" style="margin:1%">Submit</button>
-            </div>
-        </body>
-    </div>
+    <body onload="initUser()">
+        <script src="script.js"></script>
+        <div id="flash"></div>
+        <div class="centerLogin">
+            <div><span id="username" style="position:fixed;top:30vh"></span></div>
+            <form action="pricing.html" method="post">
+                <label for="email">Email:</label><br>
+                <input id="emailInput" type="email" name="emailInput" placeholder="example@domain.com"><br>
+                <label for="password">Password:</label><br>
+                <input id="passwordInput" type="password" name="passwordInput"><br><br>
+            </form>
+            <button onclick="login()" style="margin:1%">Submit</button>
+        </div>
+    </body>
 </html>
