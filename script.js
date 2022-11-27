@@ -14,10 +14,10 @@ window.addEventListener('scroll', function(){
 }
 
 //Shopping cart part
-let increment= document.getElementById("add-to-cart");
-let amount= document.getElementById("cartAmount");
+let increment=document.getElementById("add-to-cart");
+let amount=document.getElementById("cartAmount");
 let items=0;
-let decrement= document.getElementById("remove-from-cart");
+let decrement=document.getElementById("remove-from-cart");
  
 function addToCart(){
   amount.textContent=++items;
