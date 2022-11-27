@@ -39,6 +39,7 @@ function login(){
   }
 }
 
+//logout function
 function logout(){
   alert("Logged out successfully. Please close your browser to protect your sensitive information.");
   localStorage.setItem("userEmail", '');
@@ -46,10 +47,12 @@ function logout(){
   window.location = "index.html";
 }
 
+//checkout
 function checkout(){
   alert("The payment system is still under construction.");
 }
 
+//displays user's email if they're already logged in
 function initUser(){ //displays username (email) if user is logged in
   if (localStorage.getItem("userEmail")==''||localStorage.getItem("userEmail")==null) {
       document.getElementById("username").innerHTML = "<b>Not logged in</b>";
