@@ -47,7 +47,7 @@ function removeFromCart(){
   if(items>0){
     amount.textContent=--items;
   }
-} // Would've expanded the function to be able to save and display the diffrent products in the shopping cart if continued with this project.
+} // Would've expanded the function to be able to save and display the diffrent products in the shopping cart if I continued with this project.
 
 //login function
 function login(){
