@@ -14,13 +14,32 @@ window.addEventListener('scroll', function(){
 }
 
 //Shopping cart part
-function cartLoad(){
-  let increment=document.getElementById("add-to-cart");
-  let amount=document.getElementById("cartAmount").value;
-  console.log("its definited");
-  let items=0;
-  let decrement=document.getElementById("remove-from-cart");
-}
+var shoppingCart = (function() {
+  cart = [];
+  
+  // Mug Constructor
+  function Mug(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Saving  the cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Loading the cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+});
+
+let increment= document.getElementById("add-to-cart");
+let amount= document.getElementById("cartAmount");
+let items=0;
+let decrement= document.getElementById("remove-from-cart");
+
 function addToCart(){
   amount.textContent=++items;
 }
