@@ -34,18 +34,18 @@ var shoppingCart = (function() {
   function loadCart() {
     cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
   }
-  
+});
   //Shopping cart part
- let increment= document.getElementById("add-to-cart");
- let amount= document.getElementById("cartAmount");
- let items=0;
- let decrement= document.getElementById("remove-from-cart");
+let increment= document.getElementById("add-to-cart");
+let amount= document.getElementById("cartAmount");
+let items=0;
+let decrement= document.getElementById("remove-from-cart");
 
- function addToCart(){
-    amount.textContent=++items;
- }
- function removeFromCart(){
+function addToCart(){
+  amount.textContent=++items;
+}
+function removeFromCart(){
   if(items>0){
     amount.textContent=--items;
   }
- }
+}
